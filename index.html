@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
+    />
+    <link rel="stylesheet" href="style/style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="forms">
+        
+        <div class="form login">
+          <span class="title">Login</span>
+          <form id = "form1" action="#">
+            <div class="input-field">
+              <input type="text" placeholder="Enter your name" required>
+              <i class="uil uil-envelope icon"></i>
+          </div>
+            <div class="input-field">
+              <input type="password" class="password" placeholder="Enter your password" required>
+              <i class="uil uil-lock icon"></i>
+              <i class="uil uil-eye-slash hidePass"></i>
+            </div>
+            
+            <div class="checkbox-text">
+              <div class="checkbox-content">
+                <input type = "checkbox" id = "checkButton">
+                <label for="checkButton" class = "text">I accept all terms&conditions</label>
+              </div>
+              
+            </div>
+  
+            <div class="button">
+              <input type="submit" name = "submit" value = "Login" disabled>
+  
+            </div>
+            <div class="create-account">
+              <div>
+              <span>Be with us!</span></div>
+              <div>
+              <a href="#" class = "signup-link">Create an account</a>
+            </div>
+          </div>
+          </form>
+
+        </div>
+
+      
+
+        <!--Registration-->
+
+        <div class="form registration">
+          <span class="title">Registration</span>
+          <form  action="#">
+            <div class="input-field">
+              <input type="text" placeholder="Enter your name" required>
+              <i class="uil uil-user"></i>
+          </div>
+
+           
+            <div class="input-field">
+              <input type="text" placeholder="Enter your email" required>
+              <i class="uil uil-envelope icon"></i>
+          </div>
+          <div class="input-field">
+            <input type="password" class="password" placeholder="Enter your password" required>
+            <i class="uil uil-lock icon"></i>
+            
+          </div>
+            <div class="input-field">
+              <input type="password" class="password" placeholder="Confirm your password" required>
+              <i class="uil uil-lock icon"></i>
+              <i class="uil uil-eye-slash hidePass"></i>
+            </div>
+            <div class="checkbox-text">
+              <div class="checkbox-content">
+                <input type = "checkbox" id = "checkButton">
+                <label for="checkButton" class = "text">Remember me</label>
+              </div>
+             
+            </div>
+  
+            <div class="button">
+              <input type="submit" class = "registr" name = "submit" value = "Register now" disabled>
+  
+            </div>
+            <div class="create-account">
+              <div>
+              <span>Already have an account? </span></div>
+              <div>
+              <a href="#" class = "login-link">Log in</a>
+            </div>
+          </div>
+            
+          </form>
+
+        </div>
+      </div>
+    </div>
+    
+    
+
+    
+    <script src = "js/script.js"></script>
+  </body>
+</html>

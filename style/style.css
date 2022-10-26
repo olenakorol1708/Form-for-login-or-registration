@@ -1,0 +1,179 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(#ffa8df, #9198e5);
+}
+
+.container {
+  position: relative;
+  background: #fff;
+  max-width: 430px;
+  width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.container .forms {
+  display: flex;
+  align-items: center;
+  height: 440px;
+  width: 200%;
+  transition: height 0.2s ease-in-out;
+}
+.container.active .forms {
+  height: 600px;
+}
+.container .form {
+  width: 50%;
+  padding: 30px;
+  transition: margin-left 0.2s ease-in-out;
+}
+.container.active .login {
+  margin-left: -50%;
+  opacity: 0;
+  transition: margin-left 0.2s ease-in-out opacity 0.15s ease-in-out;
+}
+.container .registration {
+  opacity: 0;
+}
+.container.active .registration {
+  opacity: 1;
+  transition: opacity 0.15s ease-in-out;
+}
+.container .form .title {
+  position: relative;
+  font-size: 27px;
+  margin: 30px;
+}
+.container .form .title::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 3px;
+  width: 30px;
+  background-color: #9198e5;
+}
+.form .input-field {
+  position: relative;
+  height: 50px;
+  width: 100%;
+  margin-top: 30px;
+}
+
+.input-field input {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  padding: 0 35px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  border-bottom: 3px solid #ccc;
+  border-top: 2px solid transparent;
+  transition: all 0.2s ease-in-out;
+}
+.input-field i {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 24px;
+  color: rgb(92, 89, 89);
+}
+.input-field i.hidePass {
+  position: absolute;
+  right: 0px;
+}
+.input-field input:focus {
+  box-shadow: 0px 3px 3px #cccbcb;
+  border-bottom-color: #9198e5;
+}
+.input-field input:focus ~ i {
+  color: #9198e5;
+}
+.form .checkbox-text {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+.checkbox-text .checkbox-content {
+  display: flex;
+  align-items: center;
+}
+.checkbox-content input {
+  margin: 0 8px -2px 4px;
+  accent-color: #9198e5;
+}
+a {
+  text-decoration: none;
+  color: rgb(92, 89, 89);
+}
+a:hover {
+  color: #9198e5;
+  text-decoration: underline;
+}
+
+.form .button {
+  margin-top: 15px;
+  width: 100%;
+}
+.form .button input {
+  width: 100%;
+  border-radius: 10px;
+  padding: 10px;
+  background: #ccc;
+  font-size: 16px;
+  font-weight: 500;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+div.button input:enabled {
+  background: linear-gradient(#ffa8df, #9198e5);
+}
+div.button .registr {
+  background: linear-gradient(#ffa8df, #9198e5);
+  cursor: pointer;
+}
+div.button .registr:hover {
+  background: #9198e5;
+}
+.create-account {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+}
+.create-account div::last-of-type {
+  padding: 0 50px 0 0;
+}
+div.create-account div:last-child {
+  margin-left: 15px;
+}
+@media only screen and (max-width: 640px) {
+  .checkbox-text {
+    margin-top: 5px;
+    display: flex;
+    flex-direction: column;
+  }
+  .checkbox-text .checkbox-content {
+    margin: 5px;
+  }
+  .create-account {
+    display: flex;
+    flex-direction: column;
+    margin-top: 5px;
+  }
+}
